@@ -1,0 +1,9 @@
+        #checkbox{
+            display: inline-block;
+            vertical-align: middle;
+            width: 15px;
+        }
+        label{
+            font-size: 15px;
+            vertical-align: middle;
+        }
