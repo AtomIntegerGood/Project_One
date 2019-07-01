@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新用户注册</title>
+    <style type="text/css">
+        /*主框架*/
+        *{
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            list-style: none;
+            border-style: none;
+            text-decoration: none;
+            resize: none;
+        }
+        body{
+            background-color: #a2ddff;
+        }
+        #frame{
+            height: 450px;
+            width: 500px;
+            background-color: #fff;
+        }
+        #register{
+            height: 100%;
+            width: 100%;
+        }
+
+        /*注释 让其居中可以用 line height*/
+        #notes{
+            height: 10%;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+
+        /*控件属性*/
+        #notesP{
+            font-family: "微软雅黑 Light";
+            font-size: 13px;
+            color: #808080;
+            /*lineheight=notesheight*/
+            line-height: 30px;
+        }
+        ul{
+            float: left;
+        }
+        i{
+            font-style: normal;
+            font-size: 17px;
+            font-family: 新宋体 ;
+            line-height: 60px;
+            margin:0px 10px;
+            float: right;
+        }
+
+        input{
+            height: 30px;
+            font-size: 20px;
+            width:90% ;
+            margin: 14px 10px;
+            border: 1px solid #808080;
+        }
+        body>div>div>ul>li>.li1{
+            float: left;
+            height: 60px;
+            width: 20%;
+            background-color: grey;
+        }
+        body>div>div>ul>li>.li2{
+            height: 60px;
+            float: left;
+            width: 50%;
+            background-color: salmon;
+        }
+        body>div>div>ul>li>.li3{
+            float: left;
+            height: 60px;
+            width: 30%;
+            background-color: tomato;
+        }
+
+        #checkbox{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 50px;
+            margin-right: 0px;
+            width: 13px;
+            font-family: 新宋体;
+            color: #808080;
+        }
+        span{
+            font-size: 13px;
+            color: #808080;
+        }
+        #registerNow{
+        }
+        /*三角冒泡*/
+    </style>
+    <script type="text/javascript">
+        window.onload=function () {
+
+        }
+    </script>
+</head>
+<body>
+    <div id="frame">
+        <div id="register">
+            <ul>
+                <li>
+                    <div class="li1">
+                    <i>账号</i>
+                    </div>
+                    <div class="li2">
+                    <input type="text">
+                    </div>
+                    <div class="li3">
+                    </div>
+                </li>
+
+                <li>
+                <div class="li1">
+                    <i>密码</i>
+                </div>
+                <div class="li2">
+                    <input type="password">
+                </div>
+                <div class="li3">
+                </div>
+                </li>
+
+
+                <li>
+                    <div class="li1">
+                        <i>确认密码</i>
+                    </div>
+                    <div class="li2">
+                        <input type="password">
+                    </div>
+                    <div class="li3">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="li1">
+                        <i>手机号码</i>
+                    </div>
+                    <div class="li2">
+                        <input type="text">
+                    </div>
+                    <div class="li3">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="li1">
+                        <i>手机验证码</i>
+                    </div>
+                    <div class="li2">
+                        <input type="text">
+                    </div>
+                    <div class="li3">
+                    </div>
+                </li>
+                <li>
+                    <div class="li1">
+                        <i>2+2=？</i>
+                    </div>
+                    <div class="li2">
+                        <input type="password">
+                    </div>
+                    <div class="li3">
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="checkbox">
+                    <span>我已接受且阅读<a href="#">《用户协议》</a>和<a href="#">《服务条款》</a></span>
+                </li>
+                <li>
+                    <a id="registerNow" href="#">立即注册</a>
+                </li>
+            </ul>
+        </div>
+        <div id="notes"><p id="notesP">注：使用前自行将浏览器升级IE9或者升级更新版本以免不兼容</p></div>
+    </div>
+</body>
+</html>
