@@ -7,3 +7,6 @@
             text-decoration: none;
             resize: none;
         }
+input::-ms-clear, input::-ms-reveal{
+        display: none;
+  }
