@@ -1,0 +1,4 @@
+        input[type="password"] {
+            letter-spacing: 5px;
+            font-size: 12px;
+        }
