@@ -5,14 +5,20 @@
     <title>Title</title>
     <style type="text/css">
         #demo{
-            width: 180px;
-            height: 50px;
-            background-color: #fff;
-            border: 2px solid #000;
-            border-radius: 7px;
+            margin-top: 7px;
+            width: 140px;
+            height: 40px;
+            background-color: #FEFBD8;
+            border: 1px solid #808080;
+            border-radius: 5px;
             position: relative;
+            font-size: 13px;
+            font-family: 宋体;
+            text-align: left;
+            line-height: 20px;
+            color: #808080;
         }
-        #demo:before, #demo:after{
+        #demo:before,#demo:after{
             width: 0;
             height: 0;
             content: "";
@@ -22,17 +28,17 @@
         }
         #demo:before{
             /*border-left: 12px solid #000;*/
-            border-width: 12px;
-            border-right-color: #000;
+            border-width: 8px;
+            border-right-color: #808080;
             top: 7px;
-            left: -24px;
+            left: -16px;
         }
         #demo:after{
             /*border-left: 10px solid #fff;*/
-            border-width: 10px;
-            border-right-color: #fff;
-            top: 9px;
-            left: -20px;
+            border-width: 8px;
+            border-right-color: #FEFBD8;
+            top: 7px;
+            left: -15px;
         }
 
         /*三角形*/
