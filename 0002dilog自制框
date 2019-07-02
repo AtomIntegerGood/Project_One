@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #demo{
+            width: 180px;
+            height: 50px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 7px;
+            position: relative;
+        }
+        #demo:before, #demo:after{
+            width: 0;
+            height: 0;
+            content: "";
+            position: absolute;
+            border: solid transparent;
+            left: 0%;
+        }
+        #demo:before{
+            /*border-left: 12px solid #000;*/
+            border-width: 12px;
+            border-right-color: #000;
+            top: 7px;
+            left: -24px;
+        }
+        #demo:after{
+            /*border-left: 10px solid #fff;*/
+            border-width: 10px;
+            border-right-color: #fff;
+            top: 9px;
+            left: -20px;
+        }
+
+        /*三角形*/
+        #sanjiao{
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-left-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="demo"></div>
+<p>伪元素选择器： :first-line, :first-letter :before, :after。<br/>
+    :before表示在元素之前添加一个元素，:after表示在元素之后添加一个元素。<br/><br/>
+    CSS中绘制三角形：容器宽高设为0，然后三角形的高就是border-width, 所以让border: 50px solid transparent，再把想要的三角对应的方向设成想要的颜色就好了，如border-left-color: red。
+</p>
+<div id="sanjiao"></div>
+</body>
+</html>
