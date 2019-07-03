@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #hot{
+            width: 32px;
+            height: 23px;
+            background-color: #505050;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            position: relative;
+            line-height: 23px;
+            color: #fff;
+            text-align: left;
+            letter-spacing: 2px;
+        }
+        #hot:before,#demo:hot{
+            width: 0;
+            height: 0;
+            content: "";
+            position: absolute;
+            border: solid transparent;
+            left: 0%;
+        }
+        #hot:before{
+            /*border-left: 12px solid #000;*/
+            border-width: 8px;
+            border-top-color: #fff;
+            transform: rotate(30deg);
+            top: 19px;
+            left: -5px;
+        }
+        #hot:after{
+            /*border-left: 10px solid #fff;*/
+            border-width: 9px;
+            border-top-color: #505050;
+            transform: rotate(30deg);
+            top: 16px;
+            left: -5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hot">&nbsp;&bull;&bull;&bull;</div>
+</body>
+</html>
