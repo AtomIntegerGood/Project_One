@@ -3,198 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>新用户注册</title>
-    <style type="text/css">
-        /*主框架*/
-        *{
-            margin: 0;
-            padding: 0;
-            border: 0px;
-            font-weight: normal;
-            list-style: none;
-            text-decoration: none;
-            resize: none;
-        }
-        input::-ms-clear, input::-ms-reveal{
-            display: none;
-        }
-        body{
-            background-color: #a2ddff;
-        }
-        #frame{
-            height: 450px;
-            width: 500px;
-            background-color: #fff;
-        }
-        #register{
-            height: 450px;
-            width: 500px;
-        }
-        /*注释 让其居中可以用 line height*/
-        #notes{
-            height: 45px;
-            width: 500px;
-            background-color: #fff;
-            text-align: center;
-        }
-        /*控件属性*/
-        #notesP{
-            font-family: "微软雅黑 Light";
-            font-size: 13px;
-            color: #808080;
-            /*lineheight=notesheight*/
-            line-height: 30px;
-        }
-        ul{
-            float: left;
-        }
-        i{
-            font-style: normal;
-            font-size: 13px;
-            font-family: 新宋体;
-            line-height: 60px;
-            float: right;
-        }
-        input{
-            height: 30px;
-            font-size: 15px;
-            font-family: 宋体;
-            width: 225px;
-            margin: 14px 10px;
-            border: 1px solid #808080;
-        }
-        body>div>div>ul>li>.li1{
-            float: left;
-            height: 60px;
-            width: 100px;
-        }
-        body>div>div>ul>li>.li2{
-            height: 60px;
-            float: left;
-            width: 250px;
-        }
-        body>div>div>ul>li>.li3{
-            float: left;
-            height: 60px;
-            width: 150px;
-            background-color: #fff;
-        }
-
-        #checkbox{
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 100px;
-            margin-right: 0px;
-            width: 13px;
-            font-family: 新宋体;
-            color: #808080;
-        }
-        span{
-            font-size: 13px;
-            color: #808080;
-        }
-        #registerNow{
-            line-height: 25px;
-            background-color: #004fff;
-            border: 10px solid #004fff;
-            border-right: 15px solid #004fff;
-            border-left: 15px solid #004fff;
-            font-size: 20px;
-            font-weight: normal;
-            color: #fff;
-            border-radius: 5px;
-            font-family: 微软雅黑;
-            text-align: center;
-            float: left;
-            margin-left: 200px;
-            margin-bottom: 5px;
-        }
-
-        body>div>div>ul>li>.li3>.li3Hide{
-            margin-top: 7px;
-            width: 140px;
-            height: 40px;
-            background-color: #FEFBD8;
-            border: 1px solid #808080;
-            border-radius: 5px;
-            position: relative;
-            font-size: 13px;
-            font-family: 宋体;
-            text-align: left;
-            line-height: 20px;
-            color: #808080;
-        }
-        body>div>div>ul>li>.li3>.li3Hide:before, body>div>div>ul>li>.li3>.li3Hide:after{
-            width: 0;
-            height: 0;
-            content: "";
-            position: absolute;
-            border: solid transparent;
-            left: 0%;
-        }
-        body>div>div>ul>li>.li3>.li3Hide:before{
-            /*border-left: 12px solid #000;*/
-            border-width: 8px;
-            border-right-color: #808080;
-            top: 7px;
-            left: -16px;
-        }
-        body>div>div>ul>li>.li3>.li3Hide:after{
-            /*border-left: 10px solid #fff;*/
-            border-width: 8px;
-            border-right-color: #FEFBD8;
-            top: 7px;
-            left: -15px;
-        }
-        #email{
-            width: 121px;
-        }
-        #domain{
-            height: 30px;
-            width: 90px;
-            font-family: 宋体;
-            font-size: 15px;
-            margin-left: 0px;
-            outline-style: none;
-        }
-
-        input[type="password"] {
-            letter-spacing: 5px;
-            font-size: 12px;
-        }
-    </style>
-    <script type="text/javascript">
-        window.onload=function () {
-            var email=document.getElementById("email");
-            var domain=document.getElementById("domain");
-            var password=document.getElementById("password");
-            var confirmPassword=document.getElementById("confirmPassword");
-            var phone=document.getElementById("phone");
-            var phoneCode=document.getElementById("phoneCode");
-            var ques=document.getElementById("ques");
-            var checkbox=document.getElementById("checkbox");
-            var registerNow=document.getElementById("registerNow");
-
-            var li3Hide=document.getElementsByClassName("li3Hide");
-        }
-    </script>
+    <link rel="stylesheet" href="./css/register.css" type="text/css"/>
+    <script type="text/javascript" src="javaScript/registerContrl.js"></script>
 </head>
 <body>
 <div id="frame">
     <div id="register">
-        <ul>
+        <ul id="list">
             <li>
                 <div class="li1">
                     <i>账号</i>
                 </div>
                 <div class="li2">
-                    <input type="text" id="email">
+                    <input type="text" id="user">
                     <select id="domain">
                         <option>@SSD.club</option>
                         <option>@SSD.BUY</option>
                     </select>
                 </div>
                 <div class="li3">
-                    <div class="li3Hide">3-11位(中文,大、小写英文,数字,下划线)</div>
+                    <div class="li3Hide" id="userH" ></div>
                 </div>
             </li>
             <li>
@@ -205,7 +33,7 @@
                     <input type="password" id="password">
                 </div>
                 <div class="li3">
-                    <div class="li3Hide">8-16位(大、小写英文,数字,且必须各有一样)</div>
+                    <div class="li3Hide" id="passwordH"></div>
                 </div>
             </li>
 
@@ -217,7 +45,7 @@
                     <input type="password" id="confirmPassword">
                 </div>
                 <div class="li3">
-                    <div class="li3Hide">再次确认,和上述密码相同即可</div>
+                    <div class="li3Hide" id="confirmPasswordH"></div>
                 </div>
             </li>
             <li>
@@ -228,7 +56,7 @@
                     <input type="text" id="phone">
                 </div>
                 <div class="li3">
-                    <div class="li3Hide">仅支持中国大陆手机号码（三巨头）</div>
+                    <div class="li3Hide" id="phoneH"></div>
                 </div>
             </li>
             <li>
@@ -239,7 +67,7 @@
                     <input type="text" id="phoneCode">
                 </div>
                 <div class="li3">
-                    <div class="li3Hide"></div>
+                    <div class="li3Hide" id="phoneCodeH"></div>
                 </div>
             </li>
             <li>
@@ -250,7 +78,7 @@
                     <input type="text" id="ques">
                 </div>
                 <div class="li3">
-                    <div class="li3Hide"></div>
+                    <div class="li3Hide" id="quesH"></div>
                 </div>
             </li>
             <li>
