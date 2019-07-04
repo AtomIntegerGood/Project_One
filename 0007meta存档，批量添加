@@ -1,0 +1,46 @@
+/**
+ * 给专栏归类
+ *      1.找到name="world"的标签
+ *      2.以,号拆分meta标签里面的内容
+ *      3.给专栏添加子元素==默认 meat.length % 2==metaNum?create : NO create;
+ *      添加子元素
+ *      注意事项：每次添加地址值需要不同 所以需要  新new（Let） 一个空间
+ */
+function metaToArr(name){
+    let meta=document.getElementsByTagName("meta");
+    let metaString;
+    for(let i in meta){
+        if(meta[i].name==name){
+            metaString=meta[i];
+        }
+    }
+    let arr=metaString.content.split(",");
+    return arr;
+}
+/**
+ * 1.清空缓存 2.批量new 和添加
+ *      n%2==0，n为偶数，n%2==1，n为奇数,先默认为偶数
+ */
+function themeAdd(metaArray,elements,num) {
+    elements.innerText="";
+    if(num==0){
+            for(let i=0;i<metaArray.length;i++){
+            if(i%2==0){
+                let a=metaArray[i];
+                let div=document.createElement("div");
+                div.innerHTML = a;
+                elements.appendChild(div);
+            }
+        };
+        }else {
+        for (let i=0; i<metaArray.length;i++) {
+            if (i%2==0) {
+            } else {
+                let a = metaArray[i];
+                let div = document.createElement("div");
+                div.innerHTML = a;
+                elements.appendChild(div);
+            }
+        }
+    }
+}
