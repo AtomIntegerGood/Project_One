@@ -1,0 +1,20 @@
+    /*可有可无的夜间模式按键按键*/
+    let slide=document.getElementById("slide");let slideD=document.getElementById("slideD");let themeStyle=0;
+    setStyle(slide,{width:'42px',height:'16px',backgroundColor:'#fff',border:'2px solid #333',borderRadius:'16px',float:'right',marginTop:y*0.16-20+px});
+    setStyle(slideD,{width:'10px',height:'10px',borderRadius:'10px',marginLeft:'2px',marginTop:'-1px',backgroundColor:'#333',transition:'0.6s'});
+
+    slide.onclick=function() {
+        if (themeStyle==0){
+            themeStyle=1;
+            setStyle(slide,{backgroundColor:'#555',color:'#fff',borderColor:'#333'});
+            setStyle(slideD,{backgroundColor:'#fff',color:'#fff',borderColor:'#fff',marginLeft:'26px'});
+            setStyle(theme,styleDarkness);
+        } else {
+            themeStyle=0;
+            setStyle(slide,{backgroundColor:'#fff',color:'#333',borderColor:'#333'});
+            setStyle(slideD,{backgroundColor:'#333',color:'#333',borderColor:'#333',marginLeft:'2px'});
+            setStyle(theme,styleWhite);
+        }
+    }
+    
+    <button id="slide"><div id="slideD"></div></button>
