@@ -9,3 +9,14 @@ function setStyle(elm,styleName,value){
 }
 setStyle2(div,{width:'255px',height:'666px'});
 setStyle(div,"width","21px");
+
+
+
+let divArr=document.getElementsByTagName("div");
+function setAllStyle(element,styleList) {
+    for (let e in element) {
+        for (let a in styleList) {
+            element[e].style[a] = styleList[a];
+        }
+    }
+}
