@@ -1,0 +1,5 @@
+function replaceElement(oldnode,newnode){
+newnode = document.createElement("div");
+newnode.innerHTML = oldnode.innerHTML;
+oldnode.parentNode.replaceChild(newnode,oldnode);
+}
