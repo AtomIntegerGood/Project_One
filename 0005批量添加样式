@@ -1,0 +1,16 @@
+list:{xx:"xx";xx:"xx"}
+单个
+function setStyle(element, styleList) {
+    for (let a in styleList) {
+        element.style[a] = styleList[a];
+    }
+}
+
+nts-child(i):{"xxx";}
+所有子元素?+制定元素
+
+function setStyleAll(elements, style) {
+    for (let i = 0; i < elements.length; i++) {
+        setStyle(elements[i], style);
+    }
+}
