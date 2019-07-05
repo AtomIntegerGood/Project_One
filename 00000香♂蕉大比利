@@ -8,9 +8,6 @@
             float: left;
             width: 50%;
             height: 300px;
-            background-color: #ff6a34;
-        }
-        div:last-child{
             background-color: salmon;
         }
         textarea{
@@ -26,8 +23,23 @@
             let dick=document.getElementById("dick");
             btn.onclick=function eee() {
                 let str=banana.value;
-                console.log(str);
-                dick.innerText=str;
+                //RegExp("12333", "g"), "123"
+                str=str.replace(RegExp(": ","g"),":'");
+                str=str.replace(RegExp(";","g"),"',");
+                str=str.replace(RegExp(" ","g"),"");
+
+                //先把内容转换  → 切为【】  首位 向上转为大写
+                let arr=str.split("");
+                for(let i=0;i<arr.length;i++){
+                    if(arr[i]=="-"){
+                        arr[i+1]=arr[i+1].toUpperCase();
+                        }
+                }
+                //重新组合分隔符=空
+                str=arr.join("");
+                //删掉多余内容
+                str.replace(RegExp("-","g"),"");
+                banana.innerText=str;
             }
         }
     </script>
@@ -37,6 +49,5 @@
         <textarea id="banana"></textarea>
         <button id="btn">香蕉大比利</button>
     </div>
-    <div id="dick"></div>
 </body>
 </html>
