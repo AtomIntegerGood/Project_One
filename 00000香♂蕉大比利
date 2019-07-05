@@ -18,10 +18,9 @@
     </style>
     <script>
         window.onload=function () {
-            let banana=document.getElementById("banana");
             let btn=document.getElementById("btn");
-            let dick=document.getElementById("dick");
-            btn.onclick=function eee() {
+            let banana=document.getElementById("banana")
+            btn.onclick=function e(){
                 let str=banana.value;
                 //RegExp("12333", "g"), "123"
                 str=str.replace(RegExp(": ","g"),":'");
@@ -39,7 +38,7 @@
                 str=arr.join("");
                 //删掉多余内容
                 str.replace(RegExp("-","g"),"");
-                banana.innerText=str;
+                banana.value=str;
             }
         }
     </script>
