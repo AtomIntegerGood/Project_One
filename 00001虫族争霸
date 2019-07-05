@@ -1,0 +1,39 @@
+【【【【 步骤【1】：
+先吧meta的name的content变为数组
+或者自己建立一个数组
+
+
+用法 :  let metaName=metaToArr(name);
+返回的是一个数组对象
+        
+function metaToArr(name) {
+    let meta = document.getElementsByTagName("meta");
+    let metaString;
+    for (let i in meta) {
+        if (meta[i].name == name) {
+            metaString = meta[i];
+        }
+    }
+    let arr = metaString.content.split(",");
+    return arr;
+}
+
+
+【【【【 步骤【2】：
+先清空父元素内容，
+              以免出现不对称·内容不对等尴尬问题
+              补充：i%2=0?偶数:奇数；
+              
+注意：每一次要let一个新空间，
+                         因为地址值不同
+                         
+function themeAdd(metaArray, elements) {
+    elements.innerText = "";
+    for (let i = 0; i < metaArray.length; i++) {
+         let a = metaArray[i];
+         let div = document.createElement("div");
+         div.innerHTML = a;
+         elements.appendChild(div);
+      }
+   }
+}
