@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            float: left;
+            width: 50%;
+            height: 300px;
+            background-color: #ff6a34;
+        }
+        div:last-child{
+            background-color: salmon;
+        }
+        textarea{
+            height: 200px;
+            width: 80%;
+            font-size: 10px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            let banana=document.getElementById("banana");
+            let btn=document.getElementById("btn");
+            let dick=document.getElementById("dick");
+            btn.onclick=function eee() {
+                let str=banana.value;
+                console.log(str);
+                dick.innerText=str;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <textarea id="banana"></textarea>
+        <button id="btn">香蕉大比利</button>
+    </div>
+    <div id="dick"></div>
+</body>
+</html>
