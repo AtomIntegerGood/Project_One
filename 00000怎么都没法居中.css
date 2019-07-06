@@ -1,0 +1,9 @@
+parent{
+  display: table;
+  width: 86.6%;
+  margin-left: 6.7%;
+}
+children{
+  display:table-cell;
+  vertical-align:middle; 
+}
