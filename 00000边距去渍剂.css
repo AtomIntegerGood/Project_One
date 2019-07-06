@@ -1,5 +1,5 @@
 *{margin: 0;padding: 0;border: 0;font-weight: normal;list-style: none;background-color: #fff;text-decoration: none;resize: none;outline: none;}
-::-ms-clear,::-ms-reveal{display: none;}
+::-ms-clear,::-ms-reveal{display: none;}::-webkit-search-cancel-button{display: none;}
 html,body{width: 100%;}
 /*
 *{
